@@ -4,10 +4,18 @@ class ArticlesController < ApplicationController
     end
     
     def create
-        #render plain: params[:article].inspect
+        #render plain: params[:article].inspect     #test data
         @article = Article.new(article_params)
-        @article.save
-        redirect_to articles_show(@article)
+        if @article.save
+            flash[:notice] = "Article was successfully created"
+            redirect_to article_show(@article)
+        else
+            render :new
+        end
+    end
+    
+    def show
+        @article = Article.find(params[:id])
     end
     
     private
