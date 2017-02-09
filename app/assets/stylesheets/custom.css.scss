@@ -1,2 +1,31 @@
+$navbar-default-bg: #1755b7;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+    color: white;
+    float: left;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#logo:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.cust-center {
+    text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  background-color: #f5f5f5;
+}
