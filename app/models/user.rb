@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
+    has_many :articles
+    before_save {self.email = email.downcase} #used to handle date before saved
     validates :username,    presence: true,
                             uniqueness: {case_sensitive: false}, #ensures uniques upper/lower case
-                            length: {minimum: 6, maximum: 15},
+                            length: {minimum: 5, maximum: 15},
                             format: { 
                                 with: /\A[a-zA-Z0-9]*\z/, 
                                 :message => 'Only Alphanumeric Characters'  
