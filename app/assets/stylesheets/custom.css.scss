@@ -21,6 +21,12 @@ $navbar-default-bg: #1755b7;
     text-align: center;
 }
 
+.article-meta-details{
+     border-top: 1px solid #eaeaea;   
+     margin-top: 15px;
+     text-align: right;
+}
+
 .article-actions{
     /*border-top: 1px solid #eaeaea;*/
     padding-top: 5px;
@@ -45,4 +51,3 @@ $navbar-default-bg: #1755b7;
   height: 30px;
   background-color: #f5f5f5;
 }
-
