@@ -16,4 +16,5 @@ class User < ActiveRecord::Base
                                 with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i, #REGEX email validation
                                 :message => 'Not a Valid Email Address'
                             }
+    has_secure_password
 end
