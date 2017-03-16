@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
     before_action :set_article, only: [:edit, :update, :show, :destroy]
     
     def index
-        @article_list = Article.all
+        @article_list = Article.paginate(page: params[:page], per_page: 4)
     end
     
     
@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
     end
     
     def create
-        debugger
+        #debugger
         #render plain: params[:article].inspect     #test
         @article = Article.new(article_params)
         #harcode user for testing
