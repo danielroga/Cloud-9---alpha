@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
         @article = Article.new
     end
     
-    def create
+    def creategit
         #debugger
         #render plain: params[:article].inspect     #test
         @article = Article.new(article_params)
